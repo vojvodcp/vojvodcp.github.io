@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light Theme</title>
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to 
+// define your random words:
+
+words[1] = "support rating"
+words[2] = "jump level"
+words[3] = "traditional weight"
+words[4] = "lightweight"
+words[5] = "toe box"
+words[6] = "cut (ex. lower, hgiher)"
+words[7] = "heat moldable"
+words[8] = "width"
+words[9] = "upper material"
+words[10] = "lining material"
+words[11] = "tongue (of a skate)"
+words[12] = "collar material (of a skate)"
+words[13] = "sole material"
+words[14] = "sizes"
+words[15] = "lacing area"
+words[16] = "cushioning information"
+words[17] = "pre-attached blade"
+words[18] = "break-in time"
+words[19] = "custom order"
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+frm.WordBox.value = words[rnd]
+}</script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+	
+	<h1>Random Word Generator</h1>
+
+<FORM NAME="WordForm">  
+<INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+</FORM>
+	
+<!-- Main Container Ends -->
+</body>
+</html>
